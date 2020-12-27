@@ -184,8 +184,13 @@ h4{
   float: right;
 }
 .topnav .notificationBell {
-    height: 80px;
+  height: 80px;
   padding-top: 50px;
+}
+
+.topnav .notificationBell:hover {
+  background-color: white;
+  color:gray;
 }
 
 /* Style the input field inside the navbar */

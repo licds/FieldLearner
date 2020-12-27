@@ -1,0 +1,107 @@
+#frm{
+    font-weight: bold;
+    padding: 10px;
+}
+#frm>div{
+    margin: 5px;
+    padding: 5px;
+    vertical-align:middle;
+    initial-letter-align: center;
+}
+
+
+#frm-selects{
+    display: flex;
+}
+#frm-selects>div:nth-of-type(1){
+    flex: 0.4;
+}
+
+
+#frm-reason{
+    vertical-align:top;
+}
+
+
+#frm-date-origin-dest{
+    display: flex;
+}
+#frm-date-origin-dest>div:nth-of-type(1){
+    flex: 1.5;
+}
+#frm-date-origin-dest>div:nth-of-type(2){
+    flex: 2;
+}
+#frm-date-origin-dest>div:nth-of-type(3){
+    flex: 3;
+}
+
+
+#frm-origin-to-dest{
+    display: flex;
+}
+#frm-origin-to-dest>div:nth-of-type(1){
+    flex: 0.5;
+}
+
+
+#frm-dest-to-origin{
+    display: flex;
+}
+#frm-dest-to-origin>div:nth-of-type(1){
+    flex: 0.5;
+}
+
+
+#frm-num-ppl{
+    display: flex;
+}
+#frm-num-ppl>div:nth-of-type(1){
+    flex: 0.3;
+}
+
+
+#frm-transportation-log{
+    display: flex;
+}
+#frm-transportation-log>div:nth-of-type(1){
+    flex: 1;
+}
+#frm-transportation-log>div:nth-of-type(2){
+    flex: 1;
+}
+#frm-transportation-log>div:nth-of-type(3){
+    flex: 1;
+}
+input[type="checkbox"]{
+    width:25px;
+    height:25px;
+    vertical-align:top;
+}
+
+
+#frm-contact{
+    display: flex;
+}
+#frm-contact>div:nth-of-type(1){
+    flex: 0.3;
+}
+
+
+#frm-save-submit{
+    display: flex;
+    width: 100%;
+}
+.frm-save, .frm-submit{
+    background-color: rgb(0, 110, 255);
+    color: white;
+    border-radius: 15px;
+    text-align: center;
+    margin-left: 160px;
+    margin-right: 160px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#frm-save-submit>div{
+    flex: 1;
+}
