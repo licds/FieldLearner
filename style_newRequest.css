@@ -105,3 +105,7 @@ input[type="checkbox"]{
 #frm-save-submit>div{
     flex: 1;
 }
+#frm-save-submit>div:hover{
+    background-color:rgb(182, 233, 253);
+    color:rgb(0, 110, 255);
+}
