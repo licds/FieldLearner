@@ -1,40 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Side Navigation Bar</title>
-	<link rel="stylesheet" href="style.css">
-	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+  <meta charset="UTF-8">
+  <title>Side Navigation Bar</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="wrapper">
-    <div class="sidebar">
-        <h2>Sidebar</h2>
-        <ul>
-            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
-            <li><a href="#"><i class="fas fa-user"></i>Profile</a></li>
-            <li><a href="#"><i class="fas fa-address-card"></i>About</a></li>
-            <li><a href="#"><i class="fas fa-project-diagram"></i>portfolio</a></li>
-            <li><a href="#"><i class="fas fa-blog"></i>Blogs</a></li>
-            <li><a href="#"><i class="fas fa-address-book"></i>Contact</a></li>
-            <li><a href="#"><i class="fas fa-map-pin"></i>Map</a></li>
-        </ul> 
-        <div class="social_media">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+  <div class="wrapper">
+    <aside>
+      <div class="sidebar">
+        <h3>(img) | FieldLearner</h3>
+        <div class='adminTools'>
+          <h4>Admin tools</h4>
+          <ul>
+            <li><a href="overview.html"><i class="fas fa-home"></i><b>image1</b> Overview</a></li>
+            <li><a href="schedule.html"><i class="fas fa-user"></i><b>image2</b> Schedule</a></li>
+            <li><a href="myTrip.html"><i class="fas fa-address-card"></i><b>image3</b> My Trip</a></li>
+            <li><a href="newRequest.html"><i class="fas fa-project-diagram"></i><b>image4</b> New Request</a></li>
+            <li><a href="statement.html"><i class="fas fa-blog"></i><b>image5</b> Statement</a></li>
+            <li><a href="setting.html"><i class="fas fa-address-book"></i><b>image6</b> Setting</a></li>
+          </ul>
+        </div>
+        <div class='insights'>
+          <h4 class='insightsForLine'>Insights</h4>
+          <ul>
+            <li><a href="inbox.html"><i class="fas fa-home"></i><b>image7</b> Inbox</a></li>
+            <li><a href="notifications.html"><i class="fas fa-user"></i><b>image8</b> Notifications</a></li>
+          </ul>
+        </div>
+        <div class='miniProfile'>
+          <div class="circle">img</div>
+          <div class="nameAndID">
+            name
+            <br/>
+            ID
+          </div>
+          <div class="upDownButton">
+            <button type="button" class="btn-btn-primary"><i class="fa fa-chevron-up"></i>&#11165;</button>
+            <br/>
+            <button type="button" class="btn-btn-primary"><i class="fa fa-chevron-down"></i>&#11167;</button>
+          </div>
+        </div>
       </div>
-    </div>
+    </aside>
     <div class="main_content">
-        <div class="header">Welcome!! Have a nice day.</div>  
-        <div class="info">
-          <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
-          <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
-          <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A sed nobis ut exercitationem atque accusamus sit natus officiis totam blanditiis at eum nemo, nulla et quae eius culpa eveniet voluptatibus repellat illum tenetur, facilis porro. Quae fuga odio perferendis itaque alias sint, beatae non maiores magnam ad, veniam tenetur atque ea exercitationem earum eveniet totam ipsam magni tempora aliquid ullam possimus? Tempora nobis facere porro, praesentium magnam provident accusamus temporibus! Repellendus harum veritatis itaque molestias repudiandae ea corporis maiores non obcaecati libero, unde ipsum consequuntur aut consectetur culpa magni omnis vero odio suscipit vitae dolor quod dignissimos perferendis eos? Consequuntur!</div>
+      <div class="topnav">
+        <div class="title">
+          <h1>Title</h1>
+        </div>
+        <div>
+          <div class="search-container">
+            <form action="" method="POST" enctype="application/x-www-form-urlencoded">
+              <button type="submit">image9</button>
+              <input type="text" placeholder="Search.." name="search">
+            </form>
+          </div>
+        </div>
+        <div class="notificationBell">
+          <img src='images/bell.png' width="20px" height="20px"/>
+        </div>
       </div>
+      <div class="content">
+        <h1>
+          code here
+        </h1>
     </div>
-</div>
+  </div>
+  </div>
 
 </body>
+
 </html>
