@@ -6,7 +6,6 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  font-family: Futura;
 }
 
 body{
@@ -19,10 +18,11 @@ body{
 }
 
 .wrapper .sidebar{
+  font-family: PT Sans;
   width: 20%;
   height: 100%;
   background:white;
-  margin-left: 3%;
+  margin-left: 1%;
   position: fixed;
   border-right: solid rgba(112,112,112,0.5) 1px;
 }
@@ -30,67 +30,77 @@ body{
 .icon {
   display: inline-block;
   vertical-align: middle;
+  margin-left: 6%;
 }
 
 .text {
   display: inline-block;
-  margin-left: 10%;
+  margin-left: 8%;
   vertical-align: middle;
 }
 
 .wrapper .sidebar h4 {
-  font-size: 1vw;
+  font-size: 1.1vw;
   color: rgba(112,112,112,0.85);
   font-weight: 100;
+  margin-left: 7%;
 }
 
-.wrapper .sidebar div ul{
-  padding-top: 5%;
+.wrapper .sidebar .ulSidebar{
+  padding-top: 3%;
 }
 
-.wrapper .sidebar div ul li{
+.wrapper .sidebar .ulSidebar li{
   font-size: 1.2vw;
-  line-height: 2vw;
   font-weight: lighter;
 }    
 
-.wrapper .sidebar ul li a{
+.wrapper .sidebar .ulSidebar a{
   color:rgba(112,112,112,0.85);
   display: block;
-  margin-block: 2%;
+  margin-block: 1vw;
 }
 
-.wrapper .sidebar ul li:hover{
+.wrapper .sidebar .ulSidebar li:hover{
   background-color: rgb(0, 65, 213);
-  margin-right: 5%;
+  margin-right: 11%;
   opacity: 77%;
   border-radius: 10px;
+  vertical-align: middle;
+  border: 1px solid rgb(0, 65, 213);
 }
     
-.wrapper .sidebar ul li:hover a{
+.wrapper .sidebar .ulSidebar li:hover a{
   color: #fff;
+  margin-left: 8%;
 }
 
-.wrapper .sidebar ul li:hover img{
+.wrapper .sidebar .ulSidebar li:hover img{
   filter: brightness(0) invert(1);
+  transform: scale(1.3);
+  margin-left: 0%;
 }
 
 .wrapper .sidebar .adminTools {
   margin: 10% 0% 0% 10%;
 }
 
-hr {
-  border: px solid rgba(112,112,112,0.5);
-  margin: 6% 10% 6% 10%;
+.hrSidebar {
+  border: 1px solid rgba(112,112,112,0.5);
+  margin: 6% 11% 6% 18%;
   vertical-align: middle;
 }
 
 .wrapper .sidebar .insights{
-  margin: 0% 0% 0% 10%;
+  margin: 0% 0% 0% 11%;
 }
 
 .wrapper .sidebar .miniProfile{
-  margin: 50% 5% 0% 10%;
+  font-size: 1.2vw;
+  position: absolute;
+  bottom: 1%;
+  right: 6%;
+  left: 17%;
 }
 
 .profileImage {
@@ -99,9 +109,13 @@ hr {
   vertical-align: middle;
 }
 
+.ulProfile {
+  line-height: 2vw;
+}
+
 .nameAndID {
   display: inline-block;
-  margin-left: 10%;
+  margin-left: 5%;
   vertical-align: middle;
 }
 
@@ -118,27 +132,18 @@ hr {
   background-color: white;
 }
 
-
 .wrapper .main_content{
   width: 100%;
-  margin-left: 25%;
-}
-
-.wrapper .main_content .header{
-  padding: 20px;
-  background: white;
-  color: black;
-  border-bottom: 1px solid #e0e4e8;
+  margin-left: 21%;
+  margin-top: 3%;
+  font-family: Futura;
+  font-weight: lighter;
 }
 
 .wrapper .main_content .content{
   margin: 20px;
   color: black;
   line-height: 25px;
-}
-
-.wrapper .main_content .content div{
-  margin-bottom: 20px;
 }
 
 /* Add a black background color to the top navigation bar */
@@ -148,20 +153,24 @@ hr {
 .topnav {
   overflow: hidden;
   background-color: white;
-  border-bottom: 1px solid rgb(230, 222, 222);
   display: flex;
+  margin-left: 3%;
 }
 
-.topnav div {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 0 0;
-  text-decoration: none;
-  margin-bottom: 0;
-  flex: 1;
+.topnav .title h1{
+  text-align: left;
+  font-weight: lighter;
+  font-size: 3vw;
+  font-weight: 100;
 }
+
+.hrMainContent {
+  border: solid rgba(0, 65, 213, 0.77);
+  background-color: rgba(0, 65, 213);
+  opacity: 77%;
+  border-width: 1vw;
+}
+
 .topnav div:nth-of-type(1){
   flex: 5;
 }
@@ -175,50 +184,55 @@ hr {
   color: black;
 }
 
-.topnav .title {
-  text-align: left;
-  height: 80px;
-  padding-top: 40px;
-  padding-left: 20px;
-}
-.topnav .search-container {
-  margin-top: 10px;
-  height: 70px;
-  padding-top: 35px;
-  float: right;
-}
+
 .topnav .notificationBell {
-  height: 80px;
-  padding-top: 50px;
+  margin-top: 1%;
+  margin-right: 8%;
+  height: 3.2%;
+  width: 3.2%;
+  border: 1px solid rgba(112,112,112,0.2);
+  border-radius: 100%;
 }
 
 .topnav .notificationBell:hover {
-  background-color: white;
-  color:gray;
+  background-color:rgba(112,112,112,0.2);
 }
+
 
 /* Style the input field inside the navbar */
 .topnav input[type=text] {
-  padding: 6px;
-  margin-top: 8px;
-  font-size: 17px;
   border: none;
+}
+
+.topnav .search-container {
+  margin-top: 3%;
+  float: right;
+  background-color: white;
 }
 
 /* Style the button inside the input container */
 .topnav .search-container button {
   float: left;
-  padding: 6px;
-  margin-top: 8px;
-  margin-right: 16px;
-  background: #ddd;
-  font-size: 17px;
   border: none;
-  cursor: pointer;
+  background-color: white;
+  width: 10%;
+}
+
+.searchButton {
+  width: 150%;
 }
 
 .topnav .search-container button:hover {
-  background: #ccc;
+  background:white;
+}
+
+.searchText {
+  margin-left: 8%;
+  margin-top: 4%;
+  font-family: PT Sans;
+  font-size: 1.3vw;
+  color: rgba(112,112,112,0.05);
+  width: 82%;
 }
 
 /* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
