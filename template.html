@@ -8,39 +8,57 @@
 </head>
 
 <body>
-
   <div class="wrapper">
     <div class="sidebar">
-      <h3>(img) | FieldLearner</h3>
-      <div class='adminTools'>
+      <img class="logo" src='templateImages/logo.jpg'width=100%/>
+      <div class="adminTools">
         <h4>Admin tools</h4>
         <ul>
-          <li><a href="overview.html"><i class="fas fa-home"></i><b>image1</b> Overview</a></li>
-          <li><a href="schedule.html"><i class="fas fa-user"></i><b>image2</b> Schedule</a></li>
-          <li><a href="myTrip.html"><i class="fas fa-address-card"></i><b>image3</b> My Trip</a></li>
-          <li><a href="newRequest.html"><i class="fas fa-project-diagram"></i><b>image4</b> New Request</a></li>
-          <li><a href="statement.html"><i class="fas fa-blog"></i><b>image5</b> Statement</a></li>
-          <li><a href="setting.html"><i class="fas fa-address-book"></i><b>image6</b> Setting</a></li>
+          <li><a href="overview.html">
+            <img class="icon" src='templateImages/overviewIcon24px.svg' width=15% height=15%/>
+            <div class="text">Overview</div></a></li>
+          <li><a href="schedule.html">
+            <img class="icon" src='templateImages/scheduleIcon24px.svg' width=15% height=15%/>
+            <div class="text">Schedule</div></a></li>
+          <li><a href="myTrip.html">
+            <img class="icon" src='templateImages/mytripIcon24px.svg' width=15% height=15%/>
+            <div class="text">My Trip</div></a></li>
+          <li><a href="newRequest.html">
+            <img class="icon" src='templateImages/newrequestIcon24px.svg' width=15% height=15%/>
+            <div class="text">New Request</div></a></li>
+          <li><a href="statement.html">
+            <img class="icon" src='templateImages/statementIcon24px.svg' width=15% height=15%/>
+            <div class="text">Statement</div></a></li>
+          <li><a href="setting.html"></i>
+            <img class="icon" src='templateImages/settingIcon24px.svg' width=15% height=15%/>
+            <div class="text">Settings</div></a></li>
         </ul>
       </div>
+      <hr>
       <div class='insights'>
-        <h4 class='insightsForLine'>Insights</h4>
+        <h4>Insights</h4>
         <ul>
-          <li><a href="inbox.html"><i class="fas fa-home"></i><b>image7</b> Inbox</a></li>
-          <li><a href="notifications.html"><i class="fas fa-user"></i><b>image8</b> Notifications</a></li>
+          <li><a href="inbox.html">
+            <img class="icon" src='templateImages/inboxIcon24px.svg' width=15% height=15%/>
+            <div class="text">Inbox</div></a></li>
+          <li><a href="notifications.html">
+            <img class="icon" src='templateImages/notificationsIcon24px.svg' width=15% height=15%/>
+            <div class="text">Notifications</div></a></li>
         </ul>
       </div>
       <div class='miniProfile'>
-        <div class="circle">img</div>
+        <img class="profileImage" src='templateImages/miniprofileIcon24px.svg' width=15% height=15%/>
         <div class="nameAndID">
-          name
-          <br />
-          ID
+          <ul>
+            <li>Username</li>
+            <li style="color: rgba(112, 112, 112, 0.5);">ID</li>
+          </ul>
         </div>
         <div class="upDownButton">
-          <button type="button" class="btn-btn-primary"><i class="fa fa-chevron-up"></i>&#11165;</button>
-          <br />
-          <button type="button" class="btn-btn-primary"><i class="fa fa-chevron-down"></i>&#11167;</button>
+          <ul>
+            <li><button type="button" class="btn-btn-primary"><img src='templateImages/arrowupIcon24px.svg'/></button></li>
+            <li><button type="button" class="btn-btn-primary"><img src='templateImages/arrowdownIcon24px.svg'/></button></li>
+          </ul>
         </div>
       </div>
     </div>
@@ -52,13 +70,13 @@
         <div>
           <div class="search-container">
             <form action="" method="POST" enctype="application/x-www-form-urlencoded">
-              <button type="submit">image9</button>
-              <input type="text" placeholder="Search.." name="search">
+              <button type="submit"><img src='templateImages/searchIcon24px.svg'/></button>
+              <input type="text" placeholder="Search" name="search">
             </form>
           </div>
         </div>
         <div class="notificationBell">
-          <img src='images/bell.png' width="20px" height="20px" />
+          <img src='templateImages/notificationsIcon24px.svg' width=15% height=15% />
         </div>
       </div>
       <div class="content">
@@ -68,7 +86,6 @@
       </div>
     </div>
   </div>
-
 </body>
 
 </html>

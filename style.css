@@ -6,8 +6,7 @@
   box-sizing: border-box;
   list-style: none;
   text-decoration: none;
-  font-family:Arial, Helvetica, sans-serif;
-  font: thin;
+  font-family: Futura;
 }
 
 body{
@@ -20,104 +19,109 @@ body{
 }
 
 .wrapper .sidebar{
-  width: 250px;
+  width: 20%;
   height: 100%;
   background:white;
-  padding: 30px 0px;
+  margin-left: 3%;
   position: fixed;
-  padding : 20px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border-right: solid rgba(112,112,112,0.5) 1px;
 }
 
-.wrapper .sidebar h3{
-  color: blue;
-  text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 16px;
+.icon {
+  display: inline-block;
+  vertical-align: middle;
 }
 
-h4{
-  font-size:12px
+.text {
+  display: inline-block;
+  margin-left: 10%;
+  vertical-align: middle;
 }
 
-.wrapper .sidebar .insights .insightsForLine{
-  border-top: 1px solid black;
-  padding-top: 10px
+.wrapper .sidebar h4 {
+  font-size: 1vw;
+  color: rgba(112,112,112,0.85);
+  font-weight: 100;
+}
+
+.wrapper .sidebar div ul{
+  padding-top: 5%;
 }
 
 .wrapper .sidebar div ul li{
-  font-size: 15px;
-  padding-top: 10px;
-  padding-bottom: 10px
+  font-size: 1.2vw;
+  line-height: 2vw;
+  font-weight: lighter;
 }    
 
 .wrapper .sidebar ul li a{
-  color: black;
+  color:rgba(112,112,112,0.85);
   display: block;
-}
-
-.wrapper .sidebar ul li a .fas{
-  width: 25px;
+  margin-block: 2%;
 }
 
 .wrapper .sidebar ul li:hover{
-  background-color: blue;
-  border-radius: 15px;
+  background-color: rgb(0, 65, 213);
+  margin-right: 5%;
+  opacity: 77%;
+  border-radius: 10px;
 }
     
 .wrapper .sidebar ul li:hover a{
   color: #fff;
 }
- 
+
+.wrapper .sidebar ul li:hover img{
+  filter: brightness(0) invert(1);
+}
+
+.wrapper .sidebar .adminTools {
+  margin: 10% 0% 0% 10%;
+}
+
+hr {
+  border: px solid rgba(112,112,112,0.5);
+  margin: 6% 10% 6% 10%;
+  vertical-align: middle;
+}
+
+.wrapper .sidebar .insights{
+  margin: 0% 0% 0% 10%;
+}
+
 .wrapper .sidebar .miniProfile{
-  position: absolute;
-  left: 10px;
-  bottom: 10px;
-  width: 220px;
-  height: 60px;
-  display: flex;
+  margin: 50% 5% 0% 10%;
 }
 
-.wrapper .sidebar .miniProfile>div{
-  flex: 1;
-}
-.wrapper .sidebar .miniProfile>div:nth-of-type(2){
-  flex: 2;
-}
-
-.circle{
-  height: 40px;
-  width: 70px;
-  border-radius: 50%;
-  border:1px solid rgb(218, 214, 214);
-  line-height: 40px;
-  text-align: center;
-  margin: 15px;
-  margin-top: 10px;
+.profileImage {
+  display: inline-block;
+  margin-left: 0%;
+  vertical-align: middle;
 }
 
 .nameAndID {
-  padding-top: 10px;
+  display: inline-block;
+  margin-left: 10%;
+  vertical-align: middle;
 }
 
 .upDownButton {
-  margin: auto;
-  text-align: center;
+  display: inline-block;
+  float: right;
+  text-align: right;
+  vertical-align: middle;
 }
 
 .btn-btn-primary{
   border: none;
   text-align: center;
   background-color: white;
-
 }
 
 
 .wrapper .main_content{
   width: 100%;
-  margin-left: 250px;
-  border-left: 1px solid rgb(230, 222, 222);
+  margin-left: 25%;
 }
 
 .wrapper .main_content .header{
