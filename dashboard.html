@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Fieldlearner Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="sidebar">
+      <img class="logo" src='templateImages/logo.jpg'width=100%/>
+      <div class="adminTools">
+        <h4>Admin tools</h4>
+        <ul class='ulSidebar'>
+          <li><a href="overview.html">
+            <img class="icon" src='templateImages/overviewIcon24px.svg' width=13% height=13%/>
+            <div class="text">Overview</div></a></li>
+          <li><a href="schedule.html">
+            <img class="icon" src='templateImages/scheduleIcon24px.svg' width=13% height=13%/>
+            <div class="text">Schedule</div></a></li>
+          <li><a href="myTrip.html">
+            <img class="icon" src='templateImages/mytripIcon24px.svg' width=13% height=13%/>
+            <div class="text">My Trip</div></a></li>
+          <li><a href="newRequest.html">
+            <img class="icon" src='templateImages/newrequestIcon24px.svg' width=13% height=13%/>
+            <div class="text">New Request</div></a></li>
+          <li><a href="statement.html">
+            <img class="icon" src='templateImages/statementIcon24px.svg' width=13% height=13%/>
+            <div class="text">Statement</div></a></li>
+          <li><a href="setting.html"></i>
+            <img class="icon" src='templateImages/settingIcon24px.svg' width=13% height=13%/>
+            <div class="text">Settings</div></a></li>
+        </ul>
+      </div>
+      <hr class="hrSidebar">
+      <div class='insights'>
+        <h4>Insights</h4>
+        <ul class='ulSidebar'>
+          <li><a href="inbox.html">
+            <img class="icon" src='templateImages/inboxIcon24px.svg' width=13% height=13%/>
+            <div class="text">Inbox</div></a></li>
+          <li><a href="notifications.html">
+            <img class="icon" src='templateImages/notificationsIcon24px.svg' width=13% height=13%/>
+            <div class="text">Notifications</div></a></li>
+        </ul>
+      </div>
+      <div class='miniProfile'>
+        <img class="profileImage" src='templateImages/miniprofileIcon24px.svg' width=20% height=20%/>
+        <div class="nameAndID">
+          <ul class="ulProfile">
+            <li>Username</li>
+            <li style="color: rgba(112, 112, 112, 0.5);">ID</li>
+          </ul>
+        </div>
+        <div class="upDownButton">
+          <ul class="ulProfile">
+            <li><button type="button" class="btn-btn-primary"><img src='templateImages/arrowupIcon24px.svg'/></button></li>
+            <li><button type="button" class="btn-btn-primary"><img src='templateImages/arrowdownIcon24px.svg'/></button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="main_content">
+      <div class="topnav">
+        <div class="title">
+          <h3 style="font-weight: lighter;">Hi Username, </h3>
+          <h1>Welcome Back</h1>
+        </div>
+        <div>
+          <div class="search-container">
+            <form action="" method="POST" enctype="application/x-www-form-urlencoded">
+              <button type="submit"><img class="searchButton" src='templateImages/searchIcon24px.svg'/></button>
+              <input type="text" placeholder="Search" name="search" class="searchText">
+            </form>
+          </div>
+        </div>
+        <img class="notificationBell" src='templateImages/notificationsIcon24px.svg'/>
+      </div>
+      <div class="content">
+        <link rel="stylesheet" href='style_dashboard.css'>
+        <div class="ASU">
+          <div id="graph-wrapper">
+            <div class="graph-info">
+                <a href="javascript:void(0)" class="visitors">Visitors</a>
+                <a href="javascript:void(0)" class="returning">Returning Visitors</a>
+                <a href="#" id="bars"><span></span></a>
+                <a href="#" id="lines" class="active"><span></span></a>
+            </div>
+            <div class="graph-container">
+                <div id="graph-lines"></div>
+                <div id="graph-bars"></div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script src="js/jquery.flot.min.js"></script>
+        <script>
+          $(document).ready(function () {
+            // Graph Data ##############################################
+            var graphData = [{
+                // Visits
+                data: [ [6, 1300], [7, 1600], [8, 1900], [9, 2100], [10, 2500], [11, 2200], [12, 2000], [13, 1950], [14, 1900], [15, 2000] ],
+                color: '#71c73e'
+              }, {
+                // Returning Visits
+                data: [ [6, 500], [7, 600], [8, 550], [9, 600], [10, 800], [11, 900], [12, 800], [13, 850], [14, 830], [15, 1000] ],
+                color: '#77b7c5',
+                points: { radius: 4, fillColor: '#77b7c5' }
+              }
+            ];
+            // Lines Graph #############################################
+            $.plot($('#graph-lines'), graphData, {
+              series: {
+                points: {
+                  show: true,
+                  radius: 5
+                },
+                lines: {
+                  show: true
+                },
+                shadowSize: 0
+              },
+              grid: {
+                color: '#646464',
+                borderColor: 'transparent',
+                borderWidth: 20,
+                hoverable: true
+              },
+              xaxis: {
+                tickColor: 'transparent',
+                tickDecimals: 2
+              },
+              yaxis: {
+                tickSize: 1000
+              }
+            });
+            // Bars Graph ##############################################
+            $.plot($('#graph-bars'), graphData, {
+              series: {
+                bars: {
+                  show: true,
+                  barWidth: .9,
+                  align: 'center'
+                },
+                shadowSize: 0
+              },
+              grid: {
+                color: '#646464',
+                borderColor: 'transparent',
+                borderWidth: 20,
+                hoverable: true
+              },
+              xaxis: {
+                tickColor: 'transparent',
+                tickDecimals: 2
+              },
+              yaxis: {
+                tickSize: 1000
+              }
+            });
+            // Graph Toggle ############################################
+            $('#graph-bars').hide();
+            $('#lines').on('click', function (e) {
+              $('#bars').removeClass('active');
+              $('#graph-bars').fadeOut();
+              $(this).addClass('active');
+              $('#graph-lines').fadeIn();
+              e.preventDefault();
+            });
+            $('#bars').on('click', function (e) {
+              $('#lines').removeClass('active');
+              $('#graph-lines').fadeOut();
+              $(this).addClass('active');
+              $('#graph-bars').fadeIn().removeClass('hidden');
+              e.preventDefault();
+            });
+            // Tooltip #################################################
+            function showTooltip(x, y, contents) {
+              $('<div id="tooltip">' + contents + '</div>').css({
+                top: y - 16,
+                left: x + 20
+              }).appendTo('body').fadeIn();
+            }
+            var previousPoint = null;
+            $('#graph-lines, #graph-bars').bind('plothover', function (event, pos, item) {
+              if (item) {
+                if (previousPoint != item.dataIndex) {
+                  previousPoint = item.dataIndex;
+                  $('#tooltip').remove();
+                  var x = item.datapoint[0],
+                    y = item.datapoint[1];
+                    showTooltip(item.pageX, item.pageY, y + ' visitors at ' + x + '.00h');
+                }
+              } else {
+                $('#tooltip').remove();
+                previousPoint = null;
+              }
+            });
+          });
+          </script> 
+        </div>
+        <div class="horizontalStack">
+
+        </div>
+        <div class="detailedHorizontalStack">
+          <div class="costByTrips">
+
+          </div>
+          <div class="earning">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
