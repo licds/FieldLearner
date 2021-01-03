@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>New Request</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_newRequest.css">
+    <link rel="stylesheet" href="modal.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <img class="logo" src='templateImages/logo.jpg' width=100% />
+            <div class="adminTools">
+                <h4>Admin tools</h4>
+                <ul class='ulSidebar'>
+                    <li>
+                        <a href="overview.html">
+                            <img class="icon" src='templateImages/overviewIcon24px.svg' width=13% height=13% />
+                            <div class="text">Overview</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="schedule.html">
+                            <img class="icon" src='templateImages/scheduleIcon24px.svg' width=13% height=13% />
+                            <div class="text">Schedule</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="myTrip.html">
+                            <img class="icon" src='templateImages/mytripIcon24px.svg' width=13% height=13% />
+                            <div class="text">My Trip</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="newRequest_1.html">
+                            <img class="icon" src='templateImages/newrequestIcon24px.svg' width=13% height=13% />
+                            <div class="text">New Request</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="statement.html">
+                            <img class="icon" src='templateImages/statementIcon24px.svg' width=13% height=13% />
+                            <div class="text">Statement</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="setting.html"></i>
+                            <img class="icon" src='templateImages/settingIcon24px.svg' width=13% height=13% />
+                            <div class="text">Settings</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="hrSidebar">
+            <div class='insights'>
+                <h4>Insights</h4>
+                <ul class='ulSidebar'>
+                    <li>
+                        <a href="inbox.html">
+                            <img class="icon" src='templateImages/inboxIcon24px.svg' width=13% height=13% />
+                            <div class="text">Inbox</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="notifications.html">
+                            <img class="icon" src='templateImages/notificationsIcon24px.svg' width=13% height=13% />
+                            <div class="text">Notifications</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class='miniProfile'>
+                <img class="profileImage" src='templateImages/miniprofileIcon24px.svg' width=20% height=20% />
+                <div class="nameAndID">
+                    <ul class="ulProfile">
+                        <li>Username</li>
+                        <li style="color: rgba(112, 112, 112, 0.5);">ID</li>
+                    </ul>
+                </div>
+                <div class="upDownButton">
+                    <ul class="ulProfile">
+                        <li><button type="button" class="btn-btn-primary"><img
+                                    src='templateImages/arrowupIcon24px.svg' /></button>
+                        </li>
+                        <li><button type="button" class="btn-btn-primary"><img
+                                    src='templateImages/arrowdownIcon24px.svg' /></button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main_content">
+            <div class="topnav">
+                <div class="title">
+                    <h1><b>Create A New Request</b></h1>
+                </div>
+                <div>
+                    <div class="search-container">
+                        <form action="" method="POST" enctype="application/x-www-form-urlencoded">
+                            <button type="submit"><img class="searchButton"
+                                    src='templateImages/searchIcon24px.svg' /></button>
+                            <input type="text" placeholder="Search" name="search" class="searchText">
+                        </form>
+                    </div>
+                </div>
+                <img class="notificationBell" src='templateImages/notificationsIcon24px.svg' />
+            </div>
+            <div class="blueTopBar">
+                <h6>Estimate Trip Cost</h6>
+            </div>
+            <form id="frm2" name="survey-form" accept-charset="utf-8" action="#" method="post">
+
+                <div class="input-group">
+                    <div id="frm-departure date" style="padding-top:10px">
+                        <div class="departureDate">
+                            <label for="departure-date">Departure Date</label>
+                            <input required tabindex="5" type="date" name="departure-date" id="departure-date">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div id="frm-trip-origin-dest">
+                        <div class="trip-origin">
+                            <div class="trip-origin-header">Trip Origin:</div>
+                            <div class="address">
+                                <label for="address-origin">Address</label>
+                                <input type="text" required name="address-origin" style="vertical-align: middle">
+                            </div>
+                            <div class="city">
+                                <label for="city">City</label>
+                                <select required name="city" id="city" required style="width:100px">
+                                    <option value="Choose" selected="" disabled="">-Select-</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                            <div class="stateProvinceRegion">
+                                <label for="state-province-region">State/Provine/Region</label>
+                                <select required name="city" id="state-province-region" required="">
+                                    <option value="Choose" selected="" disabled="">-Select-</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                            <div class="zipCode">
+                                <label for="zip-code">Zip Code</label>
+                                <input type="text" required name="zip-code-origin" style="vertical-align: middle">
+                            </div>
+                        </div>
+                        <div class="trip-dest">
+                            <div class="trip-dest-header">Trip Destination:</div>
+                            <div class="address">
+                                <label for="address-dest">Address</label>
+                                <input type="text" required name="address-dest" style="vertical-align: middle">
+                            </div>
+                            <div class="city">
+                                <label for="city">City</label>
+                                <select required name="city" id="city" required style="width:100px">
+                                    <option value="Choose" selected="" disabled="">-Select-</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                            <div class="stateProvinceRegion">
+                                <label for="state-province-region">State/Provine/Region</label>
+                                <select required name="city" id="state-province-region" required="">
+                                    <option value="Choose" selected="" disabled="">-Select-</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
+                            <div class="zipCode">
+                                <label for="zip-code">Zip Code</label>
+                                <input type="text" required name="zip-code-origin" style="vertical-align: middle">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="input-group">
+                    <div id="frm-rates">
+                        <div class="distance">
+                            <label for="distance">Distance</label>
+                            <input type="text" required name="distance" style="vertical-align: middle">
+                            <text>Miles</text>
+                        </div>
+                        <div class="distanceRate">
+                            <label for="distance-rate">Distance Rate</label>
+                            <text>$</text>
+                            <input type="text" required name="distance-rate" style="vertical-align: middle">
+                            <text>/mile</text>
+                        </div>
+                        <div class="drivingHourlyRate">
+                            <label for="driving-hourly-rate" style="margin-left: 55px">Driving Hourly Rate</label>
+                            <text>$</text>
+                            <input type="text" required name="driving-hourly-rate" style="vertical-align: middle">
+                            <text>/mile</text>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="input-group">
+                    <div id="frm-hotel-meal-parking">
+                        <div class="hotel">
+                            <label for="hotel">Hotel</label>
+                            <input type="text" required name="hotel" style="vertical-align: middle">
+                        </div>
+                        <div class="meals">
+                            <label for="meals">Meals</label>
+                            <input type="text" required name="meals" style="vertical-align: middle">
+                        </div>
+                        <div class="parking">
+                            <label for="parking" style="margin-left: 55px">Parking</label>
+                            <input type="text" required name="parking" style="vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="input-group">
+                    <div id="frm-charges">
+                        <div class="overnightCharge">
+                            <label for="overnight-charge">Overnight Charge</label>
+                            <input type="text" required name="overnight-charge" style="vertical-align: middle">
+                        </div>
+                        <div class="vehicleCharge">
+                            <label for="vehhicle-charge">Vehicle Charge</label>
+                            <input type="text" required name="vehicle-charge" style="vertical-align: middle">
+                        </div>
+                        <div class="misCharge">
+                            <label for="mis-charge">Miscellaneous Charge</label>
+                            <input type="text" required name="mis-charge" style="vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="input-group">
+                    <div id="frm-num-seat-veh">
+                        <div class="numSeats">
+                            <label for="num-seats">No. Of Required Seats</label>
+                            <input type="text" required name="num-seats" style="vertical-align: middle">
+                        </div>
+                        <div class="numVeh">
+                            <label for="num-veh">No. Of Vehicles</label>
+                            <input type="text" required name="num-veh" style="vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="input-group">
+                    <div id="frm-time-rate">
+                        <div class="sitTime">
+                            <label for="sit-time">Sit Time</label>
+                            <input type="text" required name="sit-time" style="vertical-align: middle">
+                        </div>
+                        <div class="sitTimeRate">
+                            <label for="sit-time-rate">Sit Time Rate</label>
+                            <input type="text" required name="sit-time-rate" style="vertical-align: middle">
+                        </div>
+                        <div class="tolls">
+                            <label for="tolls">Tolls</label>
+                            <input type="text" required name="tolls" style="vertical-align: middle">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="totalEstimates">
+                    <div>
+                        <h4>Trip Destination</h4>
+                    </div>
+                    <div>
+                        <h4>Total Trip hours</h4>
+                    </div>
+                    <div>
+                        <h4>Total Distance Charges</h4>
+                    </div>
+                    <div>
+                        <h4>Total Driving Hourly Charges</h4>
+                    </div>
+                    <div>
+                        <h4>Total Vehicle Charges</h4>
+                    </div>
+                    <div>
+                        <h4>Total Sit Time Charges</h4>
+                    </div>
+                    <div>
+                        <h4>Total Estimated Expenses</h4>
+                    </div>
+                    <div>
+                        <text>Estimate Total</text>
+                    </div>
+                    <div class="lastline">
+                        <h4></h4>
+                        <br />
+                        <h2 style="text-align: right; margin-right: 6%">$697.02</h2>
+
+                    </div>
+                </div>
+
+
+                <br />
+                <br />
+
+                <div id="frm-save-submit">
+                    <div class="frm-save">
+                        <a href="#myModal" role="button" class="btn btn-lg btn-primary" data-toggle="modal" id="saveBtn"><b>Save</b></a>
+
+                        <!-- Modal HTML -->
+                        <div id="myModal" class="modal fade" tabindex="-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <p>Your request has been saved. You can find all</p>
+                                        <br/>
+                                        <p>your incomplete request under My Trip tab</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" id="backToMyTripAfterSave"><a
+                                                href="myTrip.html">Return to My Trip</a></button>
+                                        <button type="button" id="newRequestAfterSave"><a
+                                                href="newRequest_1.html">New Request</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="frm-submit">
+                        <a><button type="submit" value="submit">
+                                <h3>Submit</h3>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
